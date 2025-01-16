@@ -1,0 +1,73 @@
+<nav class="w-full bg-primary">
+  <div class="flex flex-wrap items-center justify-center container mx-auto p-6">
+    <div class="w-full flex justify-end xl:w-auto xl:static xl:block">
+      <button
+        aria-label="menu"
+        class="cursor-pointer text-xl bg-transparent xl:hidden"
+        type="button"
+        (click)="toggleNavbar()"
+      >
+        <i class="bi bi-list text-neutral"></i>
+      </button>
+    </div>
+    <div
+      class="xl:flex xl:flex-grow items-center justify-between"
+      [ngClass]="{ hidden: !showMenu }"
+    >
+      <ul class="flex flex-col xl:flex-row md:gap-x-6 gap-4 mx-auto text-white">
+        <li class="hover:font-bold">
+          <a
+            routerLinkActive="font-bold border-b border-text pb-2"
+            [routerLink]="['/']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [ngClass]="{
+              'font-bold border-b border-primary pb-2': router.url === '/home'
+            }"
+          >
+            Home
+          </a>
+        </li>
+        <li class="text hover:font-bold">
+          <a
+            [routerLink]="['/venture-studio']"
+            routerLinkActive="font-bold border-b border-primary pb-2"
+          >
+            Experiências
+          </a>
+        </li>
+        <li class="text hover:font-bold">
+          <a
+            routerLinkActive="font-bold border-b border-primary pb-2"
+            [routerLink]="['/academy']"
+          >
+            Habilidades
+          </a>
+        </li>
+        <li class="text hover:font-bold">
+          <a
+            routerLinkActive="font-bold border-b border-primary pb-2"
+            [routerLink]="['/academy']"
+          >
+            Formação
+          </a>
+        </li>
+        <li class="text hover:font-bold">
+          <a
+            routerLinkActive="font-bold border-b border-primary pb-2"
+            [routerLink]="['/academy']"
+          >
+            Projetos
+          </a>
+        </li>
+        <li class="text hover:font-bold">
+          <a
+            routerLinkActive="font-bold border-b border-primary pb-2"
+            [routerLink]="['/academy']"
+          >
+            Contato
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
