@@ -1,4 +1,4 @@
-<nav class="w-full bg-primary">
+<nav class="w-full bg-dark border-b border-primary">
   <div class="flex flex-wrap items-center justify-center container mx-auto p-6">
     <div class="w-full flex justify-end xl:w-auto xl:static xl:block">
       <button
@@ -14,7 +14,9 @@
       class="xl:flex xl:flex-grow items-center justify-between"
       [ngClass]="{ hidden: !showMenu }"
     >
-      <ul class="flex flex-col xl:flex-row md:gap-x-6 gap-4 mx-auto text-white">
+      <ul
+        class="flex flex-col xl:flex-row md:gap-x-6 gap-4 mx-auto text-secondary"
+      >
         <li class="hover:font-bold">
           <a
             routerLinkActive="font-bold border-b border-text pb-2"
