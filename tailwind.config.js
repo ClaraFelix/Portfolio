@@ -7,11 +7,11 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#A78BFA",
+          primary: "#0C1421",
           secondary: "#C4B5FD",
-          neutral: "#DDD6FE",
+          neutral: "#040111",
           text: "#4C1D95",
-          body: "#F5F3FF",
+          body: "#040111",
           white: "#FFFFF",
         },
       },
