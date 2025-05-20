@@ -1,8 +1,31 @@
 <section class="container lg:p-16 p-8">
-  <h2 class="text-primary font-sans text-4xl font-bold text-center pb-6">
+  <h2 class="text-secondary font-sans text-4xl font-bold text-center pb-6">
     Contato
   </h2>
-  <p class="font-mono text-lg pt-6 mx-auto text-center lg:w-1/2">
+  <p class="font-mono text-lg text-white pt-6 mx-auto text-center lg:w-1/2">
     Entre em contato comigo e vamos desenvolver juntos!
   </p>
+  <div class="w-full pb-14">
+    <p class="font-mono text-lg text-secondary">E-mail:</p>
+    <portfolio-input-icons
+      placeholder="email@email.com"
+      [(ngModel)]="userEmail"
+    >
+      <i class="bi bi-envelope-at-fill text-secondary" aria-hidden="true"></i>
+    </portfolio-input-icons>
+  </div>
+  <div class="w-full pb-14">
+    <p class="font-mono text-lg text-secondary">Mensagem:</p>
+    <portfolio-input-icons placeholder="mensagem" [(ngModel)]="userMessage">
+      <i class="bi bi-chat-right-dots text-secondary" aria-hidden="true"></i>
+    </portfolio-input-icons>
+  </div>
+  <div class="w-full text-center">
+    <button
+      class="px-6 py-3 bg-violet-900 text-white hover:text-violet-900 font-bold rounded hover:bg-secondary transition-all"
+      (click)="sendEmail()"
+    >
+      Contact
+    </button>
+  </div>
 </section>
