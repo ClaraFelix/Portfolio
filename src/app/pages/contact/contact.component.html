@@ -3,29 +3,43 @@
     Contato
   </h2>
   <p class="font-mono text-lg text-white pt-6 mx-auto text-center lg:w-1/2">
-    Entre em contato comigo e vamos desenvolver juntos!
+    Entre em contato comigo e vamos
+    <span class="text-secondary font-semibold">desenvolver</span> juntos!
   </p>
-  <div class="w-full pb-14">
-    <p class="font-mono text-lg text-secondary">E-mail:</p>
-    <portfolio-input-icons
-      placeholder="email@email.com"
-      [(ngModel)]="userEmail"
-    >
-      <i class="bi bi-envelope-at-fill text-secondary" aria-hidden="true"></i>
-    </portfolio-input-icons>
-  </div>
-  <div class="w-full pb-14">
-    <p class="font-mono text-lg text-secondary">Mensagem:</p>
-    <portfolio-input-icons placeholder="mensagem" [(ngModel)]="userMessage">
-      <i class="bi bi-chat-right-dots text-secondary" aria-hidden="true"></i>
-    </portfolio-input-icons>
-  </div>
-  <div class="w-full text-center">
-    <button
-      class="px-6 py-3 bg-violet-900 text-white hover:text-violet-900 font-bold rounded hover:bg-secondary transition-all"
-      (click)="sendEmail()"
-    >
-      Contact
-    </button>
+  <div class="md:flex justify-center gap-x-4">
+    <article class="w-1/2 mt-28">
+      <div class="w-full pb-14">
+        <p class="font-mono text-lg text-secondary">E-mail:</p>
+        <portfolio-input-icons
+          placeholder="email@email.com"
+          [(ngModel)]="userEmail"
+        >
+          <i
+            class="bi bi-envelope-at-fill text-secondary"
+            aria-hidden="true"
+          ></i>
+        </portfolio-input-icons>
+      </div>
+      <div class="w-full pb-14">
+        <p class="font-mono text-lg text-secondary">Mensagem:</p>
+        <portfolio-input-icons placeholder="mensagem" [(ngModel)]="userMessage">
+          <i
+            class="bi bi-chat-right-dots text-secondary"
+            aria-hidden="true"
+          ></i>
+        </portfolio-input-icons>
+      </div>
+      <div class="w-full text-center">
+        <button
+          class="px-6 py-3 bg-violet-900 text-white hover:text-violet-900 font-bold rounded hover:bg-secondary transition-all"
+          (click)="sendEmail()"
+        >
+          Contact
+        </button>
+      </div>
+    </article>
+    <article class="w-1/2">
+      <img src="./assets/img/img-contact-nobg.png" alt="contact" />
+    </article>
   </div>
 </section>
