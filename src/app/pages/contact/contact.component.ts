@@ -16,9 +16,7 @@ export class ContactComponent {
   sendEmail() {
     const email = 'clara.patriciafelix@hotmail.com';
     const subject = encodeURIComponent('Contato via Portfólio');
-    const body = encodeURIComponent(
-      `De: ${this.userEmail}\n\n${this.userMessage}`
-    );
+    const body = encodeURIComponent(`${this.userEmail}\n\n${this.userMessage}`);
     const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoUrl;
