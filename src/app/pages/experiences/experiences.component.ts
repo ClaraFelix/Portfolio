@@ -11,12 +11,12 @@ import { RouterModule } from '@angular/router';
 })
 export class ExperiencesComponent implements OnInit {
   experiences = [
-    { image: './assets/img/logo-UFRN.png', alt: 'Logo UFRN' },
-    { image: './assets/img/logo-factory.png', alt: 'Logo 4cadia' },
-    { image: './assets/img/logo-light.svg', alt: 'Logo BFT Solutions' },
+    { image: './assets/img/logo-UFRN.webp', alt: 'Logo UFRN' },
+    { image: './assets/img/logo-factory.webp', alt: 'Logo 4cadia' },
+    { image: './assets/img/logo-light.webp', alt: 'Logo BFT Solutions' },
     { image: './assets/img/logo-vm.webp', alt: 'Logo VM' },
-    { image: './assets/img/avonale workplace.jpeg', alt: 'Logo Avonale' },
-    { image: './assets/img/fandi.jpeg', alt: 'Logo Sistema Fandi' },
+    { image: './assets/img/avonale-workplace.webp', alt: 'Logo Avonale' },
+    { image: './assets/img/fandi.webp', alt: 'Logo Sistema Fandi' },
   ];
   currentIndex = 0;
   autoSlideInterval: any;
