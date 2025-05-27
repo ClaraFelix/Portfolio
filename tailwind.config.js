@@ -26,5 +26,8 @@ module.exports = {
       grab: "grab",
       grabbing: "grabbing",
     },
+    scrollBehavior: {
+      smooth: "smooth",
+    },
   },
 };
