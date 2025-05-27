@@ -1,10 +1,18 @@
 <div class="min-h-screen bg-neutral flex-col flex justify-between">
   <portfolio-navbar></portfolio-navbar>
-  <portfolio-home></portfolio-home>
-  <portfolio-experiences></portfolio-experiences>
-  <portfolio-skills></portfolio-skills>
-  <portfolio-training></portfolio-training>
+  <portfolio-home id="home"></portfolio-home>
+  <portfolio-experiences id="experiences"></portfolio-experiences>
+  <portfolio-skills id="skills"></portfolio-skills>
+  <portfolio-training id="training"></portfolio-training>
   <!-- <portfolio-projects></portfolio-projects> -->
-  <portfolio-contact></portfolio-contact>
+  <portfolio-contact id="contact"></portfolio-contact>
   <portfolio-footer></portfolio-footer>
+  <button
+    class="fixed bottom-6 left-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/80 transition duration-300"
+    (click)="scrollToTop()"
+    *ngIf="showScrollButton"
+    aria-label="top"
+  >
+    <i class="bi bi-arrow-up text-xl"></i>
+  </button>
 </div>
