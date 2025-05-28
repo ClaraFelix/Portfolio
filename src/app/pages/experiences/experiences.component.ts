@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, HostListener, NgZone, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -21,16 +21,31 @@ export class ExperiencesComponent implements OnInit {
   currentIndex = 0;
   autoSlideInterval: any;
   slideIndices: number[] = [];
+  imagesPerSlide = 2;
 
   constructor(private zone: NgZone) {}
 
   ngOnInit() {
+    this.updateImagesPerSlide();
     this.startAutoSlide();
     this.generateSlideIndices();
   }
 
   ngOnDestroy() {
     this.stopAutoSlide();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateImagesPerSlide();
+    this.generateSlideIndices();
+    this.currentIndex = 0;
+  }
+
+  updateImagesPerSlide() {
+    if (typeof window !== 'undefined') {
+      this.imagesPerSlide = window.innerWidth < 640 ? 1 : 2;
+    }
   }
 
   startAutoSlide() {
@@ -55,12 +70,13 @@ export class ExperiencesComponent implements OnInit {
   }
 
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 2) % this.experiences.length;
+    this.currentIndex =
+      (this.currentIndex + this.imagesPerSlide) % this.experiences.length;
   }
 
   prevSlide() {
     this.currentIndex =
-      (this.currentIndex - 2 + this.experiences.length) %
+      (this.currentIndex - this.imagesPerSlide + this.experiences.length) %
       this.experiences.length;
   }
 
@@ -70,8 +86,8 @@ export class ExperiencesComponent implements OnInit {
 
   generateSlideIndices() {
     this.slideIndices = Array.from(
-      { length: Math.ceil(this.experiences.length / 2) },
-      (_, i) => i * 2
+      { length: Math.ceil(this.experiences.length / this.imagesPerSlide) },
+      (_, i) => i * this.imagesPerSlide
     );
   }
 }

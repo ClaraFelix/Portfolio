@@ -28,12 +28,14 @@
 
   <div class="relative w-full overflow-hidden py-6">
     <div
-      class="flex transition-transform duration-700 ease-in-out sm:gap-x-2 gap-x-4"
-      [style.transform]="'translateX(-' + currentIndex * 50 + '%)'"
+      class="flex transition-transform duration-700 ease-in-out sm:gap-x-2"
+      [style.transform]="
+        'translateX(-' + currentIndex * (100 / imagesPerSlide) + '%)'
+      "
     >
       @for (experience of experiences; track $index ) {
-      <div class="sm:w-1/2 flex-shrink-0 flex justify-center">
-        <div class="md:w-60 w-36">
+      <div class="sm:w-1/2 w-full flex-shrink-0 flex justify-center">
+        <div class="md:w-60 w-64">
           <img
             [src]="experience.image"
             [alt]="experience.alt"
