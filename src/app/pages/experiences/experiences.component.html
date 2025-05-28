@@ -52,10 +52,11 @@
     >
       <button
         *ngFor="let index of slideIndices"
-        class="w-3 h-3 rounded-full"
+        class="w-5 h-5 rounded-full"
         [class.bg-white]="index === currentIndex"
         [class.bg-gray-400]="index !== currentIndex"
         (click)="goToSlide(index)"
+        title="next slide"
       ></button>
     </div>
   </div>
