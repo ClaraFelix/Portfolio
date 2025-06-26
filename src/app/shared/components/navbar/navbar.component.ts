@@ -17,4 +17,11 @@ export class NavbarComponent {
   toggleNavbar() {
     this.showMenu = !this.showMenu;
   }
+
+  scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

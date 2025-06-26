@@ -17,7 +17,7 @@
       <ul
         class="flex flex-col xl:flex-row md:gap-x-6 gap-4 mx-auto text-secondary"
       >
-        <li class="hover:font-bold">
+        <li class="hover:font-bold cursor-pointer">
           <a
             routerLinkActive="font-bold border-b border-text pb-2"
             [routerLink]="['/']"
@@ -29,42 +29,42 @@
             Home
           </a>
         </li>
-        <li class="text hover:font-bold">
+        <li class="text hover:font-bold cursor-pointer">
           <a
-            href="#experiences"
+            (click)="scrollToSection('experiences')"
             routerLinkActive="font-bold border-b border-primary pb-2"
           >
             Experiências
           </a>
         </li>
-        <li class="text hover:font-bold">
+        <li class="text hover:font-bold cursor-pointer">
           <a
             routerLinkActive="font-bold border-b border-primary pb-2"
-            href="#skills"
+            (click)="scrollToSection('skills')"
           >
             Habilidades
           </a>
         </li>
-        <li class="text hover:font-bold">
+        <li class="text hover:font-bold cursor-pointer">
           <a
             routerLinkActive="font-bold border-b border-primary pb-2"
-            href="#training"
+            (click)="scrollToSection('training')"
           >
             Formação
           </a>
         </li>
-        <li class="text hover:font-bold">
+        <li class="text hover:font-bold cursor-pointer">
           <a
             routerLinkActive="font-bold border-b border-primary pb-2"
-            href="#projects"
+            (click)="scrollToSection('projects')"
           >
             Projetos
           </a>
         </li>
-        <li class="text hover:font-bold">
+        <li class="text hover:font-bold cursor-pointer">
           <a
-            routerLinkActive="font-bold border-b border-primary pb-2"
-            href="#contact"
+            routerLinkActive="font-bold border-b border-primary pb-2 "
+            (click)="scrollToSection('contact')"
           >
             Contato
           </a>
