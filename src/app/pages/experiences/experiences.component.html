@@ -12,7 +12,7 @@
     <span class="text-secondary font-semibold">metodologias ágeis</span>
     <div class="text-center py-6">
       <a
-        href="assets/pdf/Clara-Patrícia-Felix.pdf"
+        href="assets/pdf/Clara-Patricia-Felix.pdf"
         download
         target="_blank"
         rel="noopener"
@@ -33,18 +33,18 @@
         'translateX(-' + currentIndex * (100 / imagesPerSlide) + '%)'
       "
     >
-      @for (experience of experiences; track $index ) {
-      <div class="sm:w-1/2 w-full flex-shrink-0 flex justify-center">
-        <div class="md:w-60 w-64">
-          <img
-            [src]="experience.image"
-            [alt]="experience.alt"
-            [class.pt-8]="experience.image !== './assets/img/logo-UFRN.png'"
-            [class.pt-10]="experience.image === './assets/img/logo-vm.webp'"
-            class="mx-auto"
-          />
+      @for (experience of experiences; track $index) {
+        <div class="sm:w-1/2 w-full flex-shrink-0 flex justify-center">
+          <div class="md:w-60 w-64">
+            <img
+              [src]="experience.image"
+              [alt]="experience.alt"
+              [class.pt-8]="experience.image !== './assets/img/logo-UFRN.png'"
+              [class.pt-10]="experience.image === './assets/img/logo-vm.webp'"
+              class="mx-auto"
+            />
+          </div>
         </div>
-      </div>
       }
     </div>
     <div
