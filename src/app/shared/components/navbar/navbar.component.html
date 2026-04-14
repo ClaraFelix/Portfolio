@@ -17,19 +17,23 @@
       <ul
         class="flex flex-col xl:flex-row md:gap-x-6 gap-4 mx-auto text-secondary"
       >
-        <li class="hover:font-bold cursor-pointer">
+        <li
+          class="hover:font-bold cursor-pointer hover:bg-secondary hover:bg-opacity-40 p-2 rounded"
+        >
           <a
             routerLinkActive="font-bold border-b border-text pb-2"
             [routerLink]="['/']"
             [routerLinkActiveOptions]="{ exact: true }"
             [ngClass]="{
-              'font-bold border-b border-primary pb-2': router.url === '/home'
+              'font-bold border-b border-primary pb-2': router.url === '/home',
             }"
           >
             Home
           </a>
         </li>
-        <li class="text hover:font-bold cursor-pointer">
+        <li
+          class="text hover:font-bold hover:bg-secondary hover:bg-opacity-40 p-2 rounded cursor-pointer"
+        >
           <a
             (click)="scrollToSection('experiences')"
             routerLinkActive="font-bold border-b border-primary pb-2"
@@ -37,7 +41,9 @@
             Experiências
           </a>
         </li>
-        <li class="text hover:font-bold cursor-pointer">
+        <li
+          class="text hover:font-bold cursor-pointer hover:bg-secondary hover:bg-opacity-40 p-2 rounded"
+        >
           <a
             routerLinkActive="font-bold border-b border-primary pb-2"
             (click)="scrollToSection('skills')"
@@ -45,7 +51,9 @@
             Habilidades
           </a>
         </li>
-        <li class="text hover:font-bold cursor-pointer">
+        <li
+          class="text hover:font-bold cursor-pointer hover:bg-secondary hover:bg-opacity-40 p-2 rounded"
+        >
           <a
             routerLinkActive="font-bold border-b border-primary pb-2"
             (click)="scrollToSection('training')"
@@ -53,7 +61,9 @@
             Formação
           </a>
         </li>
-        <li class="text hover:font-bold cursor-pointer">
+        <li
+          class="text hover:font-bold cursor-pointer hover:bg-secondary hover:bg-opacity-40 p-2 rounded"
+        >
           <a
             routerLinkActive="font-bold border-b border-primary pb-2"
             (click)="scrollToSection('projects')"
@@ -61,7 +71,9 @@
             Projetos
           </a>
         </li>
-        <li class="text hover:font-bold cursor-pointer">
+        <li
+          class="text hover:font-bold cursor-pointer hover:bg-secondary hover:bg-opacity-40 p-2 rounded"
+        >
           <a
             routerLinkActive="font-bold border-b border-primary pb-2 "
             (click)="scrollToSection('contact')"
